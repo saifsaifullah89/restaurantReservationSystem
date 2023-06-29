@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+import AdminAllReservations from './AdminAllReservations';
+import AdminDashboar from './AdminDashboar';
+import AdminReservationPage from './AdminReservationPage';
 import './App.css';
+import Dashboard from './Dashboard';
+import HomePage from './HomePage';
+import NotFound from './NotFound';
+import RegisterationPage from './RegisterationPage';
+import ReservationPage from './ReservationPage';
+import AuthProvider from './services/AuthContext';
+import SignIn from './SignIn';
+import UserDashboard from './UserDashboard';
+import UserDetail from './UserDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <AuthProvider>
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="signin" element={<SignIn/>}/>
+      <Route path="admin" element={<AdminDashboar/>}/>
+      <Route path="registerationpage" element={<RegisterationPage/>}/>
+      <Route path="reservation" element={<ReservationPage/>}/>
+      <Route path="dashboard" element={<Dashboard/>}/>
+      <Route path="userdetail" element={<UserDetail/>}/>
+      <Route path="adminreservation" element={<AdminReservationPage/>}/>
+      <Route path="allreservations" element={<AdminAllReservations/>}/>
+      <Route path="*" element={<NotFound/>}  />
+    </Routes>
+    </AuthProvider>
+    </>
   );
 }
 

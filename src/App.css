@@ -1,38 +1,80 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D);
 }
 
-.App-link {
-  color: #61dafb;
+
+
+@media screen and (min-width: 600px){
+  .auth-form-container{
+    padding: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputDiv{
+  position:relative;
+  width: 50%;
+  height: 10px;
+  margin-left: 40%;
+  margin-top: 25%;
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+button{
+  border: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #7439db;
+  position:relative;
+  margin-top:20%;
+  margin-left: 70%;
+  width: 20%;
+  height: 5%;
+  font-size: 30px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+.link-btn{
+
+  background-color: none;
+  color: rgb(13, 240, 228);
+  text-decoration: underline;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("homePage.jpeg");
+
+  /* Full height */
+  height: 100vh; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.divPosition{
+  top: 150px;
+  position: fixed;
+  left: 250px;
+  width: 600px;
+}
+.custom-header {
+  font-weight: bold;
+  color: blue;
 }
